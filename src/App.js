@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes, useNavigate } from "react-router-dom";
+import Home from "./pages/Home.js";
+import TopCountries from "./pages/TopCountries.js";
+import AllCountries from "./pages/AllCountries.js";
+import "./assets/css/App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App()
+{
+    const navigate = useNavigate();
+    function redirect(path)
+    {
+        navigate(path);
+    }
+
+    return (
+        <main className="main-content">
+            <Routes>
+                <Route path="/" element={<Home redirect={redirect}/>} />
+                <Route path="/top10" element={<TopCountries />} />
+                <Route path="/all" element={<AllCountries />} />
+            </Routes>
+        </main>
+    );
 }
-
-export default App;

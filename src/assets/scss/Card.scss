@@ -1,0 +1,55 @@
+.card {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 60vw;
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    background-color: #fefefe;
+
+    img {
+        width: 25vw;
+        height: fit-content;
+        border: 1px solid black;
+    }
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.country-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    * {
+        text-align: left;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+}
+
+.country-list {
+    margin-top: 40px;
+}
+
+i.fa-fw {
+    margin-right: 2px;
+}
+
+@media screen and (max-width: 630px) {
+    .card {
+        width: 70vw;
+        flex-direction: column;
+
+        img {
+            width: 60vw;
+        }
+    }
+}

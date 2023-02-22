@@ -1,0 +1,61 @@
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Karla&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: $primary-font, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 12px;
+    font-family: $secondary-font, sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.dark-theme {
+    background-color: darken($primary-color, 58%);
+    color: white;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20vh 20px;
+    text-align: center;
+}
+
+.main-button {
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+        background-color: $primary-color-darker;
+    }
+
+    &s {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    a {
+        color: white;
+    }
+}

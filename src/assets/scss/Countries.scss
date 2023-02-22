@@ -1,0 +1,132 @@
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Karla&display=swap");
+
+.navigation {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 15px;
+    background-color: $primary-color-darker;
+
+    a {
+        color: white;
+        font-size: 1.8em;
+        font-family: $secondary-font, sans-serif;
+    }
+}
+
+.data-input {
+    margin-top: 30px;
+
+    * {
+        font-size: 1em;
+        font-family: $secondary-font, sans-serif;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.label {
+    padding: 0 5px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.select {
+    @include main-form-style();
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#selected-item {
+    text-transform: capitalize;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid black;
+}
+
+.option-menu {
+    @include main-form-style();
+    list-style: none;
+    padding: 5px;
+    position: absolute;
+    top: 60px;
+    z-index: 1;
+    background-color: white;
+
+    option {
+        padding: 5px 15px;
+        margin: 5px 0;
+        border-radius: 10px;
+        cursor: pointer;
+        text-align: left;
+
+        &:hover {
+            background-color: #ececec;
+            color: black;
+        }
+    }
+}
+
+.show-button {
+    background-color: $accent-color;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+
+    &:hover {
+        background-color: $accent-color-darker;
+    }
+}
+
+.input {
+    @include main-form-style();
+    width: calc(50vw / 2 - 5px);
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.last-input {
+    width: 50vw;
+}
+
+.pair {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+
+    .label {
+        display: block;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .select, .option-menu {
+        width: 70vw;
+    }
+    .pair {
+        flex-direction: column;
+    }
+    .input {
+        width: 50vw;
+    }
+}

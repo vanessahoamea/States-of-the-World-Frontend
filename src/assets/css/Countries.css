@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Karla&display=swap");
+.navigation {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding: 15px;
+  background-color: #55b5f9;
+}
+.navigation a {
+  color: white;
+  font-size: 1.8em;
+  font-family: "Inter", sans-serif;
+}
+
+.data-input {
+  margin-top: 30px;
+}
+.data-input * {
+  font-size: 1em;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.label {
+  padding: 0 5px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.select {
+  width: 50vw;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#selected-item {
+  text-transform: capitalize;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid black;
+}
+
+.option-menu {
+  width: 50vw;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  outline: none;
+  list-style: none;
+  padding: 5px;
+  position: absolute;
+  top: 60px;
+  z-index: 1;
+  background-color: white;
+}
+.option-menu option {
+  padding: 5px 15px;
+  margin: 5px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+.option-menu option:hover {
+  background-color: #ececec;
+  color: black;
+}
+
+.show-button {
+  background-color: #77bd4c;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.show-button:hover {
+  background-color: #6daa47;
+}
+
+.input {
+  width: 50vw;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  outline: none;
+  width: calc(25vw - 5px);
+  margin-bottom: 15px;
+}
+.input:last-child {
+  margin-bottom: 0;
+}
+
+.last-input {
+  width: 50vw;
+}
+
+.pair {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.pair .label {
+  display: block;
+  text-align: left;
+}
+
+@media screen and (max-width: 630px) {
+  .select, .option-menu {
+    width: 70vw;
+  }
+  .pair {
+    flex-direction: column;
+  }
+  .input {
+    width: 50vw;
+  }
+}/*# sourceMappingURL=Countries.css.map */

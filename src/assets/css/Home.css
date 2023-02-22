@@ -1,0 +1,35 @@
+.title-text {
+  margin-bottom: 30px;
+}
+.title-text h2, .title-text i {
+  font-size: 2.7em;
+  font-weight: bold;
+}
+
+.choose-text {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.globe-icon {
+  width: 130px;
+}
+
+.earth {
+  background: url("../../../public/map.png");
+  background-size: cover;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px #ccc;
+  animation: spin 4s linear infinite alternate;
+}
+
+@keyframes spin {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}/*# sourceMappingURL=Home.css.map */
